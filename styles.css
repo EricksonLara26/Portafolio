@@ -96,10 +96,12 @@ body {
 
 .hero {
   min-height: 86vh;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 2rem;
+  display: flex;
   align-items: center;
+}
+
+.hero-content {
+  max-width: 780px;
 }
 
 .kicker {
@@ -176,30 +178,6 @@ h2 {
 .btn-small {
   font-size: 0.9rem;
   padding: 0.5rem 0.92rem;
-}
-
-.hero-photo-wrap {
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.hero-photo {
-  width: min(360px, 100%);
-  border-radius: 26px;
-  padding: 10px;
-  background: linear-gradient(145deg, rgba(202, 196, 187, 0.28), rgba(81, 84, 87, 0.3));
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-}
-
-.hero-photo img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 20px;
-  border: 1px solid #55524c;
 }
 
 .about-list {
@@ -364,8 +342,6 @@ h2 {
 }
 
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-photo { max-width: 340px; }
   .project-grid { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
 }
 
