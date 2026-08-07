@@ -1,14 +1,13 @@
 :root {
-  --bg: #171819;
-  --bg-2: #232527;
-  --surface: #2b2d30;
-  --surface-2: rgba(43, 45, 48, 0.8);
-  --text: #ece9e2;
-  --muted: #a6a19a;
-  --line: #55514c;
-  --accent: #b9b3aa;
-  --accent-2: #6f7478;
-  --success: #7f877d;
+  --bg: #070b16;
+  --bg-2: #0f172a;
+  --surface: #111b2f;
+  --surface-2: rgba(15, 23, 42, 0.82);
+  --text: #f8fafc;
+  --muted: #a7b4c8;
+  --line: rgba(148, 163, 184, 0.24);
+  --accent: #38bdf8;
+  --accent-2: #a78bfa;
   --radius: 16px;
 }
 
@@ -26,9 +25,9 @@ body {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(900px 480px at 8% -6%, rgba(182, 176, 168, 0.18), transparent 58%),
-    radial-gradient(700px 420px at 92% 8%, rgba(111, 116, 120, 0.18), transparent 60%),
-    radial-gradient(720px 360px at 50% 100%, rgba(120, 125, 130, 0.18), transparent 62%),
+    radial-gradient(900px 480px at 8% -6%, rgba(56, 189, 248, 0.18), transparent 58%),
+    radial-gradient(700px 420px at 92% 8%, rgba(167, 139, 250, 0.18), transparent 60%),
+    radial-gradient(720px 360px at 50% 100%, rgba(14, 165, 233, 0.12), transparent 62%),
     linear-gradient(180deg, var(--bg), var(--bg-2));
 }
 
@@ -41,7 +40,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   padding: 14px 6vw;
-  background: rgba(24, 25, 27, 0.84);
+  background: rgba(7, 11, 22, 0.84);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
 }
@@ -59,7 +58,7 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: #f5f2ec;
+  color: var(--accent);
 }
 
 .menu-toggle {
@@ -74,7 +73,7 @@ body {
   width: 24px;
   height: 2px;
   margin: 5px 0;
-  background: #f5f2ec;
+  background: var(--text);
 }
 
 .section {
@@ -95,7 +94,7 @@ body {
 
 .kicker {
   margin: 0;
-  color: #c1b9ae;
+  color: var(--accent);
   font-size: 0.84rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -106,6 +105,11 @@ h1 {
   margin: 0.5rem 0;
   font-size: clamp(2rem, 5.4vw, 3.9rem);
   line-height: 1.05;
+  color: var(--text);
+  background: linear-gradient(90deg, var(--text) 12%, #7dd3fc 55%, #c4b5fd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -113,14 +117,23 @@ h2 {
   font-size: clamp(1.55rem, 2.4vw, 2.2rem);
 }
 
+h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
 .subtitle {
   margin: 0 0 1rem;
   font-size: 1.15rem;
-  color: #d2ccc3;
+  color: #cbd5e1;
 }
 
 .hero-content p,
-#sobre-mi p,
 .project-card p {
   color: var(--muted);
   line-height: 1.75;
@@ -144,8 +157,9 @@ h2 {
 }
 
 .btn-primary {
-  color: #0f0f10;
-  background: linear-gradient(90deg, #d4cec4, #8d9398);
+  color: #08111e;
+  background: linear-gradient(90deg, #67e8f9, var(--accent-2));
+  box-shadow: 0 10px 28px rgba(56, 189, 248, 0.2);
 }
 
 .btn-primary:hover {
@@ -154,33 +168,19 @@ h2 {
 }
 
 .btn-outline {
-  color: #dfdbd3;
-  border-color: #4a4640;
-  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  border-color: rgba(56, 189, 248, 0.38);
+  background: rgba(56, 189, 248, 0.06);
 }
 
 .btn-outline:hover {
-  border-color: #b9b3aa;
+  border-color: var(--accent);
   transform: translateY(-2px);
 }
 
 .btn-small {
   font-size: 0.9rem;
   padding: 0.5rem 0.92rem;
-}
-
-.about-list {
-  margin-top: 1.2rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(240px, 1fr));
-  gap: 0.75rem;
-}
-
-.about-list span {
-  padding: 0.75rem;
-  border-radius: 12px;
-  border: 1px solid #55514c;
-  background: var(--surface-2);
 }
 
 .skills-grid,
@@ -205,16 +205,16 @@ h2 {
 .skill-card,
 .project-card,
 .contact-item {
-  border: 1px solid #55514c;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface-2);
   padding: 1rem;
-  transition: transform 0.24s ease, border-color 0.24s ease;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .project-empty {
-  border: 1px solid #55514c;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface-2);
   padding: 2.2rem 1.4rem;
@@ -224,7 +224,7 @@ h2 {
 
 .project-empty i {
   font-size: 2rem;
-  color: #d4cec4;
+  color: var(--accent);
   margin-bottom: 0.9rem;
 }
 
@@ -243,17 +243,18 @@ h2 {
   width: 42px;
   height: 42px;
   margin-bottom: 0.85rem;
-  border: 1px solid #55514c;
+  border: 1px solid rgba(56, 189, 248, 0.38);
   border-radius: 12px;
-  color: #d4cec4;
-  background: rgba(255, 255, 255, 0.04);
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
 }
 
 .skill-card:hover,
 .project-card:hover,
 .contact-item:hover {
   transform: translateY(-3px);
-  border-color: #b9b3aa;
+  border-color: var(--accent);
+  box-shadow: 0 16px 36px rgba(2, 8, 23, 0.34);
 }
 
 .skill-card h3,
@@ -272,7 +273,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  color: #d7d2ca;
+  color: #dbeafe;
 }
 
 .stack {
@@ -280,7 +281,7 @@ h2 {
   flex-wrap: wrap;
   gap: 0.55rem;
   margin: 1rem 0 0;
-  color: #bcb5aa;
+  color: #cbd5e1;
   font-size: 0.84rem;
   font-family: "IBM Plex Mono", monospace;
 }
@@ -290,9 +291,9 @@ h2 {
   align-items: center;
   gap: 0.42rem;
   padding: 0.35rem 0.6rem;
-  border: 1px solid #55514c;
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.64);
 }
 
 .stack i {
@@ -301,10 +302,14 @@ h2 {
 
 .contact-item {
   text-decoration: none;
-  color: #e7e2d9;
+  color: #e2e8f0;
   display: flex;
   align-items: center;
   gap: 0.7rem;
+}
+
+.contact-item i {
+  color: var(--accent);
 }
 
 .site-footer {
@@ -347,13 +352,12 @@ h2 {
     flex-direction: column;
     padding: 1rem;
     border-radius: 12px;
-    border: 1px solid #55514c;
-    background: #26282a;
+    border: 1px solid var(--line);
+    background: var(--surface);
   }
 
   .main-nav.open { display: flex; }
 
-  .about-list,
   .skills-grid,
   .project-grid,
   .contact-grid {
