@@ -17,10 +17,10 @@
   <div class="bg-layer" aria-hidden="true"></div>
 
   <header class="site-header">
-    <button class="menu-toggle" aria-label="Abrir menu">
+    <button class="menu-toggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
     </button>
-    <nav class="main-nav" aria-label="Navegacion principal">
+    <nav class="main-nav" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
       <a href="#habilidades">Habilidades</a>
       <a href="#proyectos">Proyectos</a>
@@ -35,9 +35,9 @@
         <h1>Erickson Gabriel Lara</h1>
         <p class="subtitle">Desarrollador de Software</p>
         <p>
-          Desarrollador de software con enfoque en aplicaciones web y soluciones practicas
-          para distintos tipos de proyectos. Tambien cuento con experiencia
-          en soporte tecnico e infraestructura TI, lo que me ayuda a trabajar con una vision mas
+          Desarrollador de software con enfoque en aplicaciones web y soluciones prácticas
+          para distintos tipos de proyectos. También cuento con experiencia
+          en soporte técnico e infraestructura TI, lo que me ayuda a trabajar con una visión más
           completa de cada entorno.
         </p>
         <div class="hero-actions">
@@ -48,65 +48,156 @@
     </section>
 
     <section id="habilidades" class="section reveal">
-      <h2>Habilidades tecnicas</h2>
+      <h2>Habilidades técnicas</h2>
       <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Frontend</h3>
+        <article class="skill-card skill-card--languages">
+          <h3>Lenguajes</h3>
           <ul>
             <li><i class="devicon-html5-plain colored"></i>HTML</li>
             <li><i class="devicon-css3-plain colored"></i>CSS</li>
             <li><i class="devicon-javascript-plain colored"></i>JavaScript</li>
-            <li><i class="devicon-react-original colored"></i>React</li>
+            <li><i class="devicon-python-plain colored"></i>Python</li>
           </ul>
         </article>
 
-        <article class="skill-card">
-          <h3>Backend y datos</h3>
+        <article class="skill-card skill-card--frameworks">
+          <h3>Frameworks</h3>
           <ul>
-            <li><i class="devicon-python-plain colored"></i>Python</li>
+            <li><i class="devicon-react-original colored"></i>React</li>
             <li><i class="devicon-django-plain colored"></i>Django REST</li>
-            <li><i class="fa-solid fa-database" aria-hidden="true"></i>SQL</li>
+          </ul>
+        </article>
+
+        <article class="skill-card skill-card--tools">
+          <h3>Herramientas</h3>
+          <ul>
+            <li><i class="devicon-vscode-plain colored"></i>Visual Studio Code</li>
+            <li><i class="devicon-mysql-original colored"></i>MySQL</li>
+            <li><i class="devicon-github-original"></i>GitHub</li>
+            <li><i class="devicon-git-plain colored"></i>Git</li>
+            <li><i class="devicon-pnpm-plain colored"></i>pnpm</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id="proyectos" class="section reveal">
-      <h2>Proyectos</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <i class="fa-solid fa-calendar-check project-icon" aria-hidden="true"></i>
-          <h3>DayFlow</h3>
-          <p>Sistema web para gestionar solicitudes, incidencias y tareas de soporte técnico en empresas.</p>
-          <div class="stack">
-            <span><i class="devicon-react-original colored"></i>React</span>
-            <span><i class="devicon-vitejs-plain colored"></i>Vite</span>
-            <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
-          </div>
-          <div class="card-actions">
-            <a class="btn btn-small btn-outline" href="https://github.com/EricksonLara26/DayFlow" target="_blank" rel="noreferrer">
-              Ver repositorio
-            </a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <i class="fa-solid fa-film project-icon" aria-hidden="true"></i>
-          <h3>Cine Favorito</h3>
-          <p>Aplicación web para explorar películas y consultar información básica de cada título.</p>
-          <div class="stack">
-            <span><i class="devicon-html5-plain colored"></i>HTML</span>
-            <span><i class="devicon-css3-plain colored"></i>CSS</span>
-            <span><i class="devicon-javascript-plain colored"></i>JavaScript</span>
-            <span><i class="devicon-php-plain colored"></i>PHP</span>
-          </div>
-          <div class="card-actions">
-            <a class="btn btn-small btn-outline" href="https://github.com/EricksonLara26/catalogo-peliculas" target="_blank" rel="noreferrer">
-              Ver repositorio
-            </a>
-          </div>
-        </article>
+    <section id="proyectos" class="section reveal" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="kicker">Trabajo seleccionado</p>
+        <h2 id="projects-title">Proyectos</h2>
       </div>
+
+      <article class="project-showcase">
+        <div
+          class="project-gallery"
+          role="region"
+          aria-roledescription="carrusel"
+          aria-label="Capturas de DayFlow"
+          tabindex="0"
+          data-project-carousel
+        >
+          <div class="project-viewport">
+            <div class="project-track" data-project-track>
+              <a
+                class="project-slide"
+                href="assets/dayflow-dashboard.png"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir el dashboard operativo de DayFlow"
+                aria-hidden="false"
+                data-project-slide
+                data-label="Dashboard operativo"
+              >
+                <img
+                  src="assets/dayflow-dashboard.png"
+                  alt="Dashboard operativo de DayFlow con métricas y estado de solicitudes"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                class="project-slide"
+                href="assets/dayflow-login.png"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir la pantalla de inicio de sesión de DayFlow"
+                aria-hidden="true"
+                tabindex="-1"
+                data-project-slide
+                data-label="Inicio de sesión"
+              >
+                <img src="assets/dayflow-login.png" alt="Pantalla de inicio de sesión de DayFlow" loading="lazy" />
+              </a>
+              <a
+                class="project-slide"
+                href="assets/dayflow-analytics.png"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir el panel de analítica y operación de DayFlow"
+                aria-hidden="true"
+                tabindex="-1"
+                data-project-slide
+                data-label="Analítica y operación"
+              >
+                <img src="assets/dayflow-analytics.png" alt="Panel de analítica y operación de DayFlow" loading="lazy" />
+              </a>
+            </div>
+
+            <button class="project-carousel-control project-carousel-control--prev" type="button" aria-label="Captura anterior" data-carousel-prev>
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="project-carousel-control project-carousel-control--next" type="button" aria-label="Captura siguiente" data-carousel-next>
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <span class="project-visual-label">
+              <i class="fa-solid fa-image" aria-hidden="true"></i>
+              <span data-carousel-label>Dashboard operativo</span>
+            </span>
+          </div>
+
+          <div class="project-carousel-meta">
+            <div class="project-carousel-dots" aria-label="Seleccionar captura">
+              <button class="project-carousel-dot active" type="button" aria-label="Ver dashboard operativo" aria-pressed="true" data-carousel-dot="0"></button>
+              <button class="project-carousel-dot" type="button" aria-label="Ver inicio de sesión" aria-pressed="false" data-carousel-dot="1"></button>
+              <button class="project-carousel-dot" type="button" aria-label="Ver analítica y operación" aria-pressed="false" data-carousel-dot="2"></button>
+            </div>
+            <span class="project-carousel-count" data-carousel-count>1 / 3</span>
+          </div>
+        </div>
+
+        <div class="project-details">
+          <div class="project-title-row">
+            <div>
+              <p class="project-eyebrow">Proyecto destacado</p>
+              <h3>DayFlow</h3>
+            </div>
+            <span class="project-number" aria-hidden="true">01</span>
+          </div>
+
+          <p class="project-description">
+            Sistema de gestión de tickets de soporte técnico. Centraliza
+            solicitudes, asignaciones, estados y métricas operativas en una experiencia clara
+            para administradores, técnicos y colaboradores.
+          </p>
+
+          <ul class="project-stack" aria-label="Tecnologías utilizadas">
+            <li>React</li>
+            <li>Django</li>
+            <li>MySQL</li>
+            <li>REST API</li>
+          </ul>
+
+          <div class="card-actions">
+            <a class="btn btn-small btn-primary" href="assets/dayflow-dashboard.png" target="_blank" rel="noreferrer" data-project-open>
+              Ver proyecto
+            </a>
+            <a class="btn btn-small btn-outline" href="https://github.com/EricksonLara26/DayFlow" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section id="contacto" class="section reveal">
@@ -114,15 +205,11 @@
       <div class="contact-grid">
         <a class="contact-item" href="https://maps.google.com/?q=Santo+Domingo" target="_blank" rel="noreferrer">
           <i class="fa-solid fa-location-dot"></i>
-          <span>Santo Domingo, Republica Dominicana</span>
+          <span>Santo Domingo, República Dominicana</span>
         </a>
         <a class="contact-item" href="mailto:ericksonburgos26@gmail.com">
           <i class="fa-solid fa-envelope"></i>
           <span>ericksonburgos26@gmail.com</span>
-        </a>
-        <a class="contact-item" href="tel:+18294585153">
-          <i class="fa-solid fa-phone"></i>
-          <span>+1 (829) 458-5153</span>
         </a>
         <a class="contact-item" href="https://www.linkedin.com/in/erickson-lara-54a359273" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-linkedin"></i>
