@@ -35,7 +35,14 @@ projectCarousels.forEach((carousel) => {
   const label = carousel.querySelector("[data-carousel-label]");
   const count = carousel.querySelector("[data-carousel-count]");
   const openProject = carousel.closest(".project-showcase")?.querySelector("[data-project-open]");
+  const dialog = document.querySelector("[data-project-dialog]");
+  const dialogImage = dialog?.querySelector("[data-dialog-image]");
+  const dialogLabel = dialog?.querySelector("[data-dialog-label]");
+  const dialogCount = dialog?.querySelector("[data-dialog-count]");
+  const dialogThumbnails = dialog?.querySelector("[data-dialog-thumbnails]");
+  const thumbnails = [];
   let currentIndex = 0;
+  let dialogIndex = 0;
   let touchStartX = 0;
 
   if (!track || slides.length === 0) return;
@@ -59,11 +66,70 @@ projectCarousels.forEach((carousel) => {
     const activeSlide = slides[currentIndex];
     if (label) label.textContent = activeSlide.dataset.label;
     if (count) count.textContent = `${currentIndex + 1} / ${slides.length}`;
-    if (openProject) {
-      openProject.href = activeSlide.href;
-      openProject.setAttribute("aria-label", `Abrir la captura completa: ${activeSlide.dataset.label}`);
-    }
   };
+
+  const showDialogImage = (requestedIndex) => {
+    dialogIndex = (requestedIndex + slides.length) % slides.length;
+    const slide = slides[dialogIndex];
+    const image = slide.querySelector("img");
+    if (!image || !dialogImage) return;
+
+    dialogImage.src = image.currentSrc || image.src;
+    dialogImage.alt = image.alt;
+    if (dialogLabel) dialogLabel.textContent = slide.dataset.label;
+    if (dialogCount) dialogCount.textContent = `${dialogIndex + 1} / ${slides.length}`;
+    thumbnails.forEach((thumbnail, index) => {
+      thumbnail.classList.toggle("active", index === dialogIndex);
+      thumbnail.setAttribute("aria-pressed", String(index === dialogIndex));
+    });
+  };
+
+  const openDialog = (index) => {
+    if (!dialog) return;
+    showDialogImage(index);
+    dialog.showModal();
+    document.body.classList.add("dialog-open");
+  };
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener("click", (event) => {
+      event.preventDefault();
+      openDialog(index);
+    });
+
+    if (!dialogThumbnails) return;
+    const thumbnail = document.createElement("button");
+    const preview = slide.querySelector("img")?.cloneNode();
+    thumbnail.type = "button";
+    thumbnail.className = "project-dialog-thumbnail";
+    thumbnail.setAttribute("aria-label", `Ver ${slide.dataset.label}`);
+    thumbnail.setAttribute("aria-pressed", "false");
+    if (preview) {
+      preview.alt = "";
+      thumbnail.append(preview);
+    }
+    const title = document.createElement("span");
+    title.textContent = slide.dataset.label;
+    thumbnail.append(title);
+    thumbnail.addEventListener("click", () => showDialogImage(index));
+    dialogThumbnails.append(thumbnail);
+    thumbnails.push(thumbnail);
+  });
+
+  openProject?.addEventListener("click", () => openDialog(currentIndex));
+  dialog?.querySelector("[data-dialog-close]")?.addEventListener("click", () => dialog.close());
+  dialog?.querySelector("[data-dialog-prev]")?.addEventListener("click", () => showDialogImage(dialogIndex - 1));
+  dialog?.querySelector("[data-dialog-next]")?.addEventListener("click", () => showDialogImage(dialogIndex + 1));
+  dialog?.addEventListener("close", () => document.body.classList.remove("dialog-open"));
+  dialog?.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showDialogImage(dialogIndex + (event.key === "ArrowRight" ? 1 : -1));
+    }
+  });
 
   previousButton?.addEventListener("click", () => showSlide(currentIndex - 1));
   nextButton?.addEventListener("click", () => showSlide(currentIndex + 1));

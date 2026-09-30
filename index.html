@@ -103,12 +103,10 @@
               <a
                 class="project-slide"
                 href="assets/dayflow-dashboard.png"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir el dashboard operativo de DayFlow"
+                aria-label="Ver el estado operativo de DayFlow en la galería"
                 aria-hidden="false"
                 data-project-slide
-                data-label="Dashboard operativo"
+                data-label="Estado operativo"
               >
                 <img
                   src="assets/dayflow-dashboard.png"
@@ -119,9 +117,7 @@
               <a
                 class="project-slide"
                 href="assets/dayflow-login.png"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir la pantalla de inicio de sesión de DayFlow"
+                aria-label="Ver el inicio de sesión de DayFlow en la galería"
                 aria-hidden="true"
                 tabindex="-1"
                 data-project-slide
@@ -132,15 +128,24 @@
               <a
                 class="project-slide"
                 href="assets/dayflow-analytics.png"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir el panel de analítica y operación de DayFlow"
+                aria-label="Ver el panel de información de DayFlow en la galería"
                 aria-hidden="true"
                 tabindex="-1"
                 data-project-slide
-                data-label="Analítica y operación"
+                data-label="Panel de información"
               >
-                <img src="assets/dayflow-analytics.png" alt="Panel de analítica y operación de DayFlow" loading="lazy" />
+                <img src="assets/dayflow-analytics.png" alt="Panel de información de DayFlow con métricas de solicitudes" loading="lazy" />
+              </a>
+              <a
+                class="project-slide"
+                href="assets/dayflow-tickets.png"
+                aria-label="Ver la gestión de tickets de DayFlow en la galería"
+                aria-hidden="true"
+                tabindex="-1"
+                data-project-slide
+                data-label="Gestión de tickets"
+              >
+                <img src="assets/dayflow-tickets.png" alt="Gestión de tickets de DayFlow con filtros y lista de solicitudes" loading="lazy" />
               </a>
             </div>
 
@@ -153,17 +158,18 @@
 
             <span class="project-visual-label">
               <i class="fa-solid fa-image" aria-hidden="true"></i>
-              <span data-carousel-label>Dashboard operativo</span>
+              <span data-carousel-label>Estado operativo</span>
             </span>
           </div>
 
           <div class="project-carousel-meta">
             <div class="project-carousel-dots" aria-label="Seleccionar captura">
-              <button class="project-carousel-dot active" type="button" aria-label="Ver dashboard operativo" aria-pressed="true" data-carousel-dot="0"></button>
+              <button class="project-carousel-dot active" type="button" aria-label="Ver estado operativo" aria-pressed="true" data-carousel-dot="0"></button>
               <button class="project-carousel-dot" type="button" aria-label="Ver inicio de sesión" aria-pressed="false" data-carousel-dot="1"></button>
-              <button class="project-carousel-dot" type="button" aria-label="Ver analítica y operación" aria-pressed="false" data-carousel-dot="2"></button>
+              <button class="project-carousel-dot" type="button" aria-label="Ver panel de información" aria-pressed="false" data-carousel-dot="2"></button>
+              <button class="project-carousel-dot" type="button" aria-label="Ver gestión de tickets" aria-pressed="false" data-carousel-dot="3"></button>
             </div>
-            <span class="project-carousel-count" data-carousel-count>1 / 3</span>
+            <span class="project-carousel-count" data-carousel-count>1 / 4</span>
           </div>
         </div>
 
@@ -190,9 +196,9 @@
           </ul>
 
           <div class="card-actions">
-            <a class="btn btn-small btn-primary" href="assets/dayflow-dashboard.png" target="_blank" rel="noreferrer" data-project-open>
+            <button class="btn btn-small btn-primary" type="button" data-project-open>
               Ver proyecto
-            </a>
+            </button>
             <a class="btn btn-small btn-outline" href="https://github.com/EricksonLara26/DayFlow" target="_blank" rel="noreferrer">
               <i class="fa-brands fa-github" aria-hidden="true"></i>
               GitHub
@@ -201,6 +207,32 @@
         </div>
       </article>
     </section>
+
+    <dialog class="project-dialog" aria-labelledby="project-dialog-title" data-project-dialog>
+      <div class="project-dialog-header">
+        <div>
+          <p class="project-eyebrow">Galería del proyecto</p>
+          <h2 id="project-dialog-title">DayFlow</h2>
+        </div>
+        <button class="project-dialog-close" type="button" aria-label="Cerrar galería" data-dialog-close>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="project-dialog-viewer">
+        <button class="project-dialog-control" type="button" aria-label="Imagen anterior" data-dialog-prev>
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <img data-dialog-image alt="" />
+        <button class="project-dialog-control" type="button" aria-label="Imagen siguiente" data-dialog-next>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="project-dialog-caption">
+        <span data-dialog-label></span>
+        <span data-dialog-count></span>
+      </div>
+      <div class="project-dialog-thumbnails" aria-label="Imágenes de DayFlow" data-dialog-thumbnails></div>
+    </dialog>
 
     <section id="contacto" class="section reveal">
       <h2>Contacto</h2>
