@@ -89,124 +89,6 @@
         <h2 id="projects-title">Proyectos</h2>
       </div>
 
-      <article class="project-showcase">
-        <div
-          class="project-gallery"
-          role="region"
-          aria-roledescription="carrusel"
-          aria-label="Capturas de DayFlow"
-          tabindex="0"
-          data-project-carousel
-        >
-          <div class="project-viewport">
-            <div class="project-track" data-project-track>
-              <a
-                class="project-slide"
-                href="assets/dayflow-dashboard.png"
-                aria-label="Ver el estado operativo de DayFlow en la galería"
-                aria-hidden="false"
-                data-project-slide
-                data-label="Estado operativo"
-              >
-                <img
-                  src="assets/dayflow-dashboard.png"
-                  alt="Dashboard operativo de DayFlow con métricas y estado de solicitudes"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                class="project-slide"
-                href="assets/dayflow-login.png"
-                aria-label="Ver el inicio de sesión de DayFlow en la galería"
-                aria-hidden="true"
-                tabindex="-1"
-                data-project-slide
-                data-label="Inicio de sesión"
-              >
-                <img src="assets/dayflow-login.png" alt="Pantalla de inicio de sesión de DayFlow" loading="lazy" />
-              </a>
-              <a
-                class="project-slide"
-                href="assets/dayflow-analytics.png"
-                aria-label="Ver el panel de información de DayFlow en la galería"
-                aria-hidden="true"
-                tabindex="-1"
-                data-project-slide
-                data-label="Panel de información"
-              >
-                <img src="assets/dayflow-analytics.png" alt="Panel de información de DayFlow con métricas de solicitudes" loading="lazy" />
-              </a>
-              <a
-                class="project-slide"
-                href="assets/dayflow-tickets.png"
-                aria-label="Ver la gestión de tickets de DayFlow en la galería"
-                aria-hidden="true"
-                tabindex="-1"
-                data-project-slide
-                data-label="Gestión de tickets"
-              >
-                <img src="assets/dayflow-tickets.png" alt="Gestión de tickets de DayFlow con filtros y lista de solicitudes" loading="lazy" />
-              </a>
-            </div>
-
-            <button class="project-carousel-control project-carousel-control--prev" type="button" aria-label="Captura anterior" data-carousel-prev>
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <button class="project-carousel-control project-carousel-control--next" type="button" aria-label="Captura siguiente" data-carousel-next>
-              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </button>
-
-            <span class="project-visual-label">
-              <i class="fa-solid fa-image" aria-hidden="true"></i>
-              <span data-carousel-label>Estado operativo</span>
-            </span>
-          </div>
-
-          <div class="project-carousel-meta">
-            <div class="project-carousel-dots" aria-label="Seleccionar captura">
-              <button class="project-carousel-dot active" type="button" aria-label="Ver estado operativo" aria-pressed="true" data-carousel-dot="0"></button>
-              <button class="project-carousel-dot" type="button" aria-label="Ver inicio de sesión" aria-pressed="false" data-carousel-dot="1"></button>
-              <button class="project-carousel-dot" type="button" aria-label="Ver panel de información" aria-pressed="false" data-carousel-dot="2"></button>
-              <button class="project-carousel-dot" type="button" aria-label="Ver gestión de tickets" aria-pressed="false" data-carousel-dot="3"></button>
-            </div>
-            <span class="project-carousel-count" data-carousel-count>1 / 4</span>
-          </div>
-        </div>
-
-        <div class="project-details">
-          <div class="project-title-row">
-            <div>
-              <p class="project-eyebrow">Proyecto destacado</p>
-              <h3>DayFlow</h3>
-            </div>
-            <span class="project-number" aria-hidden="true">01</span>
-          </div>
-
-          <p class="project-description">
-            Sistema de gestión de tickets de soporte técnico. Centraliza
-            solicitudes, asignaciones, estados y métricas operativas en una experiencia clara
-            para administradores, técnicos y colaboradores.
-          </p>
-
-          <ul class="project-stack" aria-label="Tecnologías utilizadas">
-            <li>React</li>
-            <li>Django</li>
-            <li>MySQL</li>
-            <li>REST API</li>
-          </ul>
-
-          <div class="card-actions">
-            <button class="btn btn-small btn-primary" type="button" data-project-open>
-              Ver proyecto
-            </button>
-            <a class="btn btn-small btn-outline" href="https://github.com/EricksonLara26/DayFlow" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-github" aria-hidden="true"></i>
-              GitHub
-            </a>
-          </div>
-        </div>
-      </article>
-
       <article class="project-showcase" aria-labelledby="automation-project-title">
         <div class="project-details">
           <div class="project-title-row">
@@ -214,7 +96,7 @@
               <p class="project-eyebrow">Automatización de pruebas</p>
               <h3 id="automation-project-title">Test de automatización</h3>
             </div>
-            <span class="project-number" aria-hidden="true">02</span>
+            <span class="project-number" aria-hidden="true">01</span>
           </div>
 
           <p class="project-description">
@@ -237,33 +119,54 @@
           </div>
         </div>
       </article>
-    </section>
-
-    <dialog class="project-dialog" aria-labelledby="project-dialog-title" data-project-dialog>
-      <div class="project-dialog-header">
-        <div>
-          <p class="project-eyebrow">Galería del proyecto</p>
-          <h2 id="project-dialog-title">DayFlow</h2>
+      <article class="project-showcase" aria-labelledby="academic-project-title">
+        <div class="project-gallery">
+          <a
+            class="academic-project-preview"
+            href="https://sistema-gestion-academica-lu51.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir el Sistema de Gestión Académica en una nueva pestaña"
+          >
+            <img
+              src="assets/gestion-academica-background.png"
+              alt=""
+              width="1672"
+              height="941"
+              loading="lazy"
+            />
+            <span class="academic-project-cover" aria-hidden="true">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <strong>Sistema de<br />Gestión Académica</strong>
+              <span>Centro Educativo Creciendo Montessori</span>
+            </span>
+          </a>
         </div>
-        <button class="project-dialog-close" type="button" aria-label="Cerrar galería" data-dialog-close>
-          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
-      </div>
-      <div class="project-dialog-viewer">
-        <button class="project-dialog-control" type="button" aria-label="Imagen anterior" data-dialog-prev>
-          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-        </button>
-        <img data-dialog-image alt="" />
-        <button class="project-dialog-control" type="button" aria-label="Imagen siguiente" data-dialog-next>
-          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-        </button>
-      </div>
-      <div class="project-dialog-caption">
-        <span data-dialog-label></span>
-        <span data-dialog-count></span>
-      </div>
-      <div class="project-dialog-thumbnails" aria-label="Imágenes de DayFlow" data-dialog-thumbnails></div>
-    </dialog>
+
+        <div class="project-details">
+          <div class="project-title-row">
+            <div>
+              <p class="project-eyebrow">Gestión educativa</p>
+              <h3 id="academic-project-title">Sistema de Gestión Académica</h3>
+            </div>
+            <span class="project-number" aria-hidden="true">02</span>
+          </div>
+
+          <p class="project-description">
+            Plataforma web de gestión académica para el Centro Educativo Creciendo
+            Montessori, con inicio de sesión mediante usuario y contraseña para
+            acceder al espacio de gestión del centro.
+          </p>
+
+          <div class="card-actions">
+            <a class="btn btn-small btn-primary" href="https://sistema-gestion-academica-lu51.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              Ver sistema
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
 
     <section id="contacto" class="section reveal">
       <h2>Contacto</h2>
