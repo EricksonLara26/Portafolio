@@ -270,6 +270,10 @@ h2::after {
   box-shadow: 0 22px 52px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
+.project-showcase + .project-showcase {
+  margin-top: 1.5rem;
+}
+
 .project-gallery {
   padding: 0.7rem;
   border-bottom: 1px solid var(--line);
