@@ -89,83 +89,131 @@
         <h2 id="projects-title">Proyectos</h2>
       </div>
 
-      <article class="project-showcase" aria-labelledby="automation-project-title">
-        <div class="project-details">
-          <div class="project-title-row">
-            <div>
-              <p class="project-eyebrow">Automatización de pruebas</p>
-              <h3 id="automation-project-title">Test de automatización</h3>
+      <div class="projects-grid">
+        <article class="project-showcase" aria-labelledby="automation-project-title">
+          <div class="project-gallery">
+            <div class="project-preview automation-project-preview" aria-hidden="true">
+              <i class="fa-solid fa-terminal"></i>
+              <strong>Python + Selenium</strong>
+              <span>Pruebas automatizadas</span>
             </div>
-            <span class="project-number" aria-hidden="true">01</span>
           </div>
+          <div class="project-details">
+            <div class="project-title-row">
+              <div>
+                <p class="project-eyebrow">Automatización de pruebas</p>
+                <h3 id="automation-project-title">Test de automatización</h3>
+              </div>
+              <span class="project-number" aria-hidden="true">01</span>
+            </div>
 
-          <p class="project-description">
-            Pruebas automatizadas de inicio de sesión con Python y Selenium.
-            Valida los mensajes de error ante un usuario o una contraseña incorrectos
-            mediante esperas explícitas y aserciones, con cierre automático del navegador.
-          </p>
+            <p class="project-description">
+              Pruebas automatizadas de inicio de sesión con Python y Selenium.
+              Valida los mensajes de error ante un usuario o una contraseña incorrectos
+              mediante esperas explícitas y aserciones, con cierre automático del navegador.
+            </p>
 
-          <ul class="project-stack" aria-label="Tecnologías utilizadas">
-            <li>Python</li>
-            <li>Selenium</li>
-            <li>Google Chrome</li>
-          </ul>
+            <ul class="project-stack" aria-label="Tecnologías utilizadas">
+              <li>Python</li>
+              <li>Selenium</li>
+              <li>Google Chrome</li>
+            </ul>
 
-          <div class="card-actions">
-            <a class="btn btn-small btn-outline" href="https://github.com/EricksonLara26/test_automatizacion" target="_blank" rel="noreferrer">
-              <i class="fa-brands fa-github" aria-hidden="true"></i>
-              GitHub
+            <div class="card-actions">
+              <a class="btn btn-small btn-outline" href="https://github.com/EricksonLara26/test_automatizacion" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="project-showcase" aria-labelledby="academic-project-title">
+          <div class="project-gallery">
+            <a
+              class="project-preview academic-project-preview"
+              href="https://sistema-gestion-academica-lu51.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir el Sistema de Gestión Académica en una nueva pestaña"
+            >
+              <img
+                src="assets/gestion-academica-background.png"
+                alt=""
+                width="1672"
+                height="941"
+                loading="lazy"
+              />
+              <span class="academic-project-cover" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <strong>Sistema de<br />Gestión Académica</strong>
+                <span>Centro Educativo Creciendo Montessori</span>
+              </span>
             </a>
           </div>
-        </div>
-      </article>
-      <article class="project-showcase" aria-labelledby="academic-project-title">
-        <div class="project-gallery">
-          <a
-            class="academic-project-preview"
-            href="https://sistema-gestion-academica-lu51.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir el Sistema de Gestión Académica en una nueva pestaña"
-          >
-            <img
-              src="assets/gestion-academica-background.png"
-              alt=""
-              width="1672"
-              height="941"
-              loading="lazy"
-            />
-            <span class="academic-project-cover" aria-hidden="true">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <strong>Sistema de<br />Gestión Académica</strong>
-              <span>Centro Educativo Creciendo Montessori</span>
-            </span>
-          </a>
-        </div>
 
-        <div class="project-details">
-          <div class="project-title-row">
-            <div>
-              <p class="project-eyebrow">Gestión educativa</p>
-              <h3 id="academic-project-title">Sistema de Gestión Académica</h3>
+          <div class="project-details">
+            <div class="project-title-row">
+              <div>
+                <p class="project-eyebrow">Gestión educativa</p>
+                <h3 id="academic-project-title">Sistema de Gestión Académica</h3>
+              </div>
+              <span class="project-number" aria-hidden="true">02</span>
             </div>
-            <span class="project-number" aria-hidden="true">02</span>
+
+            <p class="project-description">
+              Plataforma web de gestión académica para el Centro Educativo Creciendo
+              Montessori, con inicio de sesión mediante usuario y contraseña para
+              acceder al espacio de gestión del centro.
+            </p>
+
+            <div class="card-actions">
+              <a class="btn btn-small btn-primary" href="https://sistema-gestion-academica-lu51.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                Ver sistema
+              </a>
+            </div>
           </div>
-
-          <p class="project-description">
-            Plataforma web de gestión académica para el Centro Educativo Creciendo
-            Montessori, con inicio de sesión mediante usuario y contraseña para
-            acceder al espacio de gestión del centro.
-          </p>
-
-          <div class="card-actions">
-            <a class="btn btn-small btn-primary" href="https://sistema-gestion-academica-lu51.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-              Ver sistema
+        </article>
+        <article class="project-showcase" aria-labelledby="integra360-project-title">
+          <div class="project-gallery">
+            <a
+              class="project-preview integra360-project-preview"
+              href="https://integra360-blond.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir Integra360 en una nueva pestaña"
+            >
+              <img
+                src="assets/integra360-logo.png"
+                alt="Logo de Integra360"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
             </a>
           </div>
-        </div>
-      </article>
+          <div class="project-details">
+            <div class="project-title-row">
+              <div>
+                <p class="project-eyebrow">Incorporación y bienestar laboral</p>
+                <h3 id="integra360-project-title">Integra360</h3>
+              </div>
+              <span class="project-number" aria-hidden="true">03</span>
+            </div>
+
+            <p class="project-description">
+              Aplicación web enfocada en la incorporación y el bienestar laboral.
+            </p>
+
+            <div class="card-actions">
+              <a class="btn btn-small btn-primary" href="https://integra360-blond.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                Ver Integra360
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section id="contacto" class="section reveal">
